@@ -1,0 +1,23 @@
+<p>home workss!</p>
+
+<div *ngIf="foods.length > 0">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Category</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let food of foods; let i = index;">
+          <td>{{food.idCategory}}</td>
+          <td>{{food.strCategory}}</td>
+          <td> <img src={{food.strCategoryThumb}} alt="" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="foods.length === 0">Loading...</div>
+  
